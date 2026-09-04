@@ -2,8 +2,10 @@ import 'package:flutter/material.dart';
 
 class TelaJogoHeroi extends StatefulWidget {
   @override
-  State<Tela<JogoHeroi> <reatesStates() => Tela>JogoHeroiState ();
+  State <TelaJogoHeroi> createState() => TelaJogoHeroiState ();
 }
+
+
  class TelaJogoHeroiState extends State<TelaJogoHeroi> {
   String nomeHeroi = '';
   int vida = 0;
@@ -14,26 +16,26 @@ class TelaJogoHeroi extends StatefulWidget {
   @override
   Widget build(BuildContext context){
     return Scaffold(body:
-    Center(
-    child: Column(
-    children: [
-      Text("Ecolha um heroi")
-      ElevatedButton(
-      onPressed: () => escolherheroi ("Guerreiro"),
-      child: Text("Guerreiro")),
-      ElevatedButton(
-      onPressed: () => escolherheroi ("Mago"),
-      child: Text("Mago"))
-  ],
-  )));
-    Card(
+      Center(
+        child: Column(
+          children: [
+            Text("Ecolha um heroi"),
+            ElevatedButton(
+              onPressed: () => escolherheroi ("Guerreiro"),
+              child: Text("Guerreiro")
+            ),
+            ElevatedButton(
+              onPressed: () => escolherheroi ("Mago"),
+              child: Text("Mago")
+            ),
+            Card(
                 elevation: 5, // Dá uma sombra 3D ao cartão
                 color: Colors.grey[200],
                 child: Padding(
                   padding: const EdgeInsets.all(20.0),
                   child: Column(
                     children: [
-                      Text('Classe: $heroiSelecionado', style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
+                      Text('Classe: $nomeHeroi', style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
                       const Divider(), // Linha divisória
                       Text('❤️ Vida: $vida', style: const TextStyle(fontSize: 18, color: Colors.red)),
                       Text('💰 Moedas: $moedas', style: const TextStyle(fontSize: 18, color: Colors.orange)),
@@ -42,6 +44,11 @@ class TelaJogoHeroi extends StatefulWidget {
                   ),
                 )
               )
+          ],
+        )
+      )
+    );
+    
 
 
   }

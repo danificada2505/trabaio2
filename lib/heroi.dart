@@ -1,0 +1,73 @@
+import 'package:flutter/material.dart';
+
+class TelaJogoHeroi extends StatefulWidget {
+  @override
+  State<Tela<JogoHeroi> <reatesStates() => Tela>JogoHeroiState ();
+}
+ class TelaJogoHeroiState extends State<TelaJogoHeroi> {
+  String nomeHeroi = '';
+  int vida = 0;
+  int moedas = 0;
+  int poder = 0;
+  String urlImagem = '';
+
+  @override
+  Widget build(BuildContext context){
+    return Scaffold(body:
+    Center(
+    child: Column(
+    children: [
+      Text("Ecolha um heroi")
+      ElevatedButton(
+      onPressed: () => escolherheroi ("Guerreiro"),
+      child: Text("Guerreiro")),
+      ElevatedButton(
+      onPressed: () => escolherheroi ("Mago"),
+      child: Text("Mago"))
+  ],
+  )));
+    Card(
+                elevation: 5, // Dá uma sombra 3D ao cartão
+                color: Colors.grey[200],
+                child: Padding(
+                  padding: const EdgeInsets.all(20.0),
+                  child: Column(
+                    children: [
+                      Text('Classe: $heroiSelecionado', style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
+                      const Divider(), // Linha divisória
+                      Text('❤️ Vida: $vida', style: const TextStyle(fontSize: 18, color: Colors.red)),
+                      Text('💰 Moedas: $moedas', style: const TextStyle(fontSize: 18, color: Colors.orange)),
+                      Text('⚔️ Poder: $poder', style: const TextStyle(fontSize: 18, color: Colors.blue)),
+                    ],
+                  ),
+                )
+              )
+
+
+  }
+  void escolherheroi (String tipoHeroi) {
+    setState(() {
+      if(tipoHeroi == "Guerreiro") {
+      nomeHeroi = "Guerreiro";
+      vida = 200;
+      moedas = 50;
+      poder = 100;
+      urlImagem ="https://chatgpt.com/s/m_6a9ab96a76208191af619a858fbd0e9e";
+
+    } else if (tipoHeroi == "Mago" ) {
+      nomeHeroi = "Guerreiro";
+      vida = 250;
+      moedas = 50;
+      poder = 500;
+      urlImagem ="https://chatgpt.com/s/m_6a9aba9264b4819192362ab792111185";
+    } else if (tipoHeroi == "Arqueiro") {
+      nomeHeroi = "Guerreiro";
+      vida = 250;
+      moedas = 50;
+      poder = 400;
+      urlImagem = "https://chatgpt.com/s/m_6a9abde29e048191a46c2abcd51bc231";
+    }
+
+   });
+  }
+ }

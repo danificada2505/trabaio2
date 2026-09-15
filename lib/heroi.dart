@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'escolha.dart';
+
 class TelaJogoHeroi extends StatefulWidget {
   @override
   State <TelaJogoHeroi> createState() => TelaJogoHeroiState ();
@@ -21,6 +23,10 @@ class TelaJogoHeroi extends StatefulWidget {
           children: [
             Text("Ecolha um heroi"),
             ElevatedButton(
+              onPressed: () => escolherheroi ("Arqueiro"),
+              child: Text("Arqueiro")
+            ),
+            ElevatedButton(
               onPressed: () => escolherheroi ("Guerreiro"),
               child: Text("Guerreiro")
             ),
@@ -29,14 +35,14 @@ class TelaJogoHeroi extends StatefulWidget {
               child: Text("Mago")
             ),
             Card(
-                elevation: 5, // Dá uma sombra 3D ao cartão
+                elevation: 5, 
                 color: Colors.grey[200],
                 child: Padding(
                   padding: const EdgeInsets.all(20.0),
                   child: Column(
                     children: [
                       Text('Classe: $nomeHeroi', style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
-                      const Divider(), // Linha divisória
+                      const Divider(),
                       Text('❤️ Vida: $vida', style: const TextStyle(fontSize: 18, color: Colors.red)),
                       Text('💰 Moedas: $moedas', style: const TextStyle(fontSize: 18, color: Colors.orange)),
                       Text('⚔️ Poder: $poder', style: const TextStyle(fontSize: 18, color: Colors.blue)),
@@ -62,13 +68,13 @@ class TelaJogoHeroi extends StatefulWidget {
       urlImagem ="https://chatgpt.com/s/m_6a9ab96a76208191af619a858fbd0e9e";
 
     } else if (tipoHeroi == "Mago" ) {
-      nomeHeroi = "Guerreiro";
+      nomeHeroi = "Mago";
       vida = 250;
       moedas = 50;
       poder = 500;
       urlImagem ="https://chatgpt.com/s/m_6a9aba9264b4819192362ab792111185";
     } else if (tipoHeroi == "Arqueiro") {
-      nomeHeroi = "Guerreiro";
+      nomeHeroi = "Arqueiro";
       vida = 250;
       moedas = 50;
       poder = 400;

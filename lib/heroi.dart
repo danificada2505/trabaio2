@@ -65,20 +65,20 @@ class TelaJogoHeroi extends StatefulWidget {
       vida = 200;
       moedas = 50;
       poder = 100;
-      urlImagem ="https://chatgpt.com/s/m_6a9ab96a76208191af619a858fbd0e9e";
+      urlImagem ="https://chatgpt.com/s/m_6aad26bd7ae48191bc50d07a71d90fbf";
 
     } else if (tipoHeroi == "Mago" ) {
       nomeHeroi = "Mago";
       vida = 250;
       moedas = 50;
       poder = 500;
-      urlImagem ="https://chatgpt.com/s/m_6a9aba9264b4819192362ab792111185";
+      urlImagem ="https://chatgpt.com/s/m_6aad27c526b48191b623db9b6c05319d";
     } else if (tipoHeroi == "Arqueiro") {
       nomeHeroi = "Arqueiro";
       vida = 250;
       moedas = 50;
       poder = 400;
-      urlImagem = "https://chatgpt.com/s/m_6a9abde29e048191a46c2abcd51bc231";
+      urlImagem = "https://chatgpt.com/s/m_6aad282b5418819192677cbcc8162af7";
     }
 
    });

@@ -27,13 +27,13 @@ class TelaAmbienteState extends State <TelaAmbiente>{
   double posicaoVerticalHeroi = 20;
   double posHorizontalPocao = 150;
   double posVerticalPocao = 200;
-  late int _vida;
+  late int vida;
   bool pocaoColetada = false;
 
 @override
   void initState(){
     super.initState();
-    _vida = widget.vida;
+    vida = widget.vida;
   }
 
   void andarParaDireita() {
@@ -73,7 +73,7 @@ class TelaAmbienteState extends State <TelaAmbiente>{
     if (bateX && bateY) {
       setState(() {
         pocaoColetada = true;
-        _vida += 50;
+        vida += 50;
       });
     }
   }

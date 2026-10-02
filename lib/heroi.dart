@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-import 'escolha.dart';
-
 class TelaJogoHeroi extends StatefulWidget {
   @override
   State <TelaJogoHeroi> createState() => TelaJogoHeroiState ();
